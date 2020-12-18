@@ -8,7 +8,8 @@
           "alias": {
             "@components": "./components",
             "@themes": "./themes",
-            "@interfaces": "./interfaces"
+            "@interfaces": "./interfaces",
+            "@lib": "./lib"
           }
         }
       ]

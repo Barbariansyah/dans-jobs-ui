@@ -10,11 +10,10 @@ export const JobThumbnailStyle = styled.div`
 
 export const LeftSection = styled.div``;
 
-export const RightSection = styled.div``;
+export const RightSection = styled.div`
+    text-align: right;
+`;
 
 export const Row = styled.div`
     display: flex;
-    /* > div {
-        margin: 0 5px;
-    } */
 `;

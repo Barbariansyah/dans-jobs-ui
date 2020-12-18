@@ -2,18 +2,12 @@ import React, { FunctionComponent } from 'react';
 import { JobThumbnailStyle, LeftSection, RightSection, Row } from './style';
 import { Bold, Thin, Regular } from '@components/Typography';
 import LinkWrapper from '@components/LinkWrapper';
-
-interface JobThumbnailProps {
-    id: string;
-    title: string;
-    company: string;
-    type: string;
-    location: string;
-    createdAt: string;
-}
+import { JobThumbnailProps } from '@interfaces/index';
 
 const JobThumbnail: FunctionComponent<JobThumbnailProps> = (props: JobThumbnailProps) => {
     const detailUrl = `/job/${props.id}`;
+
+    const creationDate = props.created_at.split(' ', 3).join(' ');
 
     return (
         <LinkWrapper link={detailUrl}>
@@ -27,7 +21,7 @@ const JobThumbnail: FunctionComponent<JobThumbnailProps> = (props: JobThumbnailP
                 </LeftSection>
                 <RightSection>
                     <Regular>{props.location}</Regular>
-                    <Thin>{props.createdAt}</Thin>
+                    <Thin>{creationDate}</Thin>
                 </RightSection>
             </JobThumbnailStyle>
         </LinkWrapper>

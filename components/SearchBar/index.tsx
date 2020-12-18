@@ -3,6 +3,8 @@ import { SearchBarStyle } from './style';
 import TextField from '@components/TextField';
 import Checkbox from '@components/Checkbox';
 import { Button } from '@components/Button';
+import LinkWrapper from '@components/LinkWrapper';
+import { Bold } from '@components/Typography';
 
 const SearchBar: FunctionComponent = () => {
     const [jobDesc, setJobDesc] = useState('');
@@ -47,6 +49,9 @@ const SearchBar: FunctionComponent = () => {
 
     return (
         <SearchBarStyle>
+            <LinkWrapper link="/">
+                <Bold>Github Jobs</Bold>
+            </LinkWrapper>
             <TextField title="Job Description" onValueChange={changeJobDesc} />
             <TextField title="Location" onValueChange={changeLocation} />
             <Checkbox title="Full Time Only" onValueChange={changeFulltime} />

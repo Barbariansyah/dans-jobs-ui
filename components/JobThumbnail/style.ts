@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const JobThumbnailStyle = styled.div`
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
+    border-bottom: 0.5px solid #000;
     padding: 24px 0;
     cursor: pointer;
 `;

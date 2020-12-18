@@ -26,3 +26,10 @@ export const Thin = styled.div<ColorProps>`
     color: ${(props) => (props.color ? props.color : '#000')};
     margin: 4px 8px;
 `;
+
+export const Small = styled.div<ColorProps>`
+    font-size: 24px;
+    font-weight: 300;
+    color: ${(props) => (props.color ? props.color : '#000')};
+    margin: 24px 0 0 0;
+`;
